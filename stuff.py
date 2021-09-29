@@ -20,22 +20,31 @@ def p_user_choice():
         if instructions == '1':
             input_choice_1 = input(prompts.prompt_2)
             run = False
-            return input_choice_1
+            return input_choice_1, instructions
         elif instructions == '2':
             input_choice_2 = input(prompts.prompt_3)
             run = False
-            return input_choice_2
+            return input_choice_2, instructions
         elif instructions == '3':
             input_choice_3 = input(prompts.prompt_4)
             run = False
-            return input_choice_3
+            return input_choice_3, instructions
         else:
             print('Try again')
 
 
+def get_pres_bynumb(filename, number):
+    file = open_file(filename, 'readlines')
+    line = file[number]
+    return line
+
+
 def presidents_info(filename):
     file = open_file(filename, 'readlines')
-    choice = p_user_choice()
+    choice, instruction = p_user_choice()
+    if instruction == 3:
+        item = get_pres_bynumb(filename, choice)
+        print(item)
 
 
 presidents_info('presidents.txt')
