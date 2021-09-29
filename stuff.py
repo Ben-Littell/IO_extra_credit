@@ -35,6 +35,7 @@ def p_user_choice():
 
 def presidents_info(filename):
     file = open_file(filename, 'readlines')
-    print(file)
+    choice = p_user_choice()
 
-# presidents_info('presidents.txt')
+
+presidents_info('presidents.txt')
