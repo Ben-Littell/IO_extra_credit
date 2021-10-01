@@ -48,7 +48,6 @@ def get_office_date(filename, name):
             return c_line[3]
 
 # get_office_date('presidents.txt', 'John Adams')
-######
 
 
 def year_to_pres(filename, year):
