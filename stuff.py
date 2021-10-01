@@ -63,7 +63,6 @@ def year_to_pres(filename, year):
 
 # test = year_to_pres('presidents.txt', '1797')
 # print(test)
-# main
 
 
 def presidents_info(filename):
